@@ -1,13 +1,23 @@
 
 ## Our stack
 
-ReactJs
-Styled components
-Nodejs / Express 
-MongoDb / Mongoose
-ElasticSearch ( only when high volume / complexe queries are required) 
+- AWS ( Or azure when needed )
 
-React Native
+
+- ReactJs
+- Styled components
+- Reactstrap
+- Nodejs / Express 
+- MongoDb / Mongoose 
+
+- ElasticSearch ( only when high volume / complexe queries are required , connected with mongoosastic) 
+- React Native
+
+- Sentry
+- RobotUpTime
+
+- AmplitudeJS
+- Trello 
 
 
 

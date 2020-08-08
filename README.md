@@ -61,3 +61,4 @@ Code should look like it was written by a single individual.
 - avoir un MDD le plus flat possible, 
 - faire une route d'upload des images plutot que s'emmerder a merger ca avec un put etc... 
 - dont create   wasRefused: false properties but instead status : String {REFUSED,ACCEPTED,PENDING}
+- dont create a function used once which is only one line

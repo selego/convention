@@ -33,7 +33,10 @@ Premature optimization is spending a lot of time on something that you may not a
 
 One of the biggest challenges is making sure we are making good use of our time
 
-My biggest concern right now isn’t performance or scale. I’m spending my time working on prototyping some of the features and designing UI mockups of other parts of the product. I have been focusing on getting user feedback to iterating on the final product features and functionality. I am trying to prevent wasting a lot of time on things that may never be needed.
+
+The more confidence you have that you are building the right things, the more time you should put into proper software architecture, performance, scalability, etc. Striking this balance is always the challenge. Like most things in life, the answer is almost always “it depends”.
+
+The performance and scalability of your application are important. You just need to make sure you are building the right feature set first. Avoid premature optimization by getting user feedback early and often from your users.
 
 
 

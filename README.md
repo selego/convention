@@ -1,4 +1,17 @@
 
+## Our stack
+
+ReactJs
+Styled components
+Nodejs / Express 
+MongoDb / Mongoose
+ElasticSearch ( only when high volume / complexe queries are required) 
+
+React Native
+
+
+
+
 
 ## Consistency is key
 

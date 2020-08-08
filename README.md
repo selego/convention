@@ -12,8 +12,20 @@ React Native
 
 
 
+## Some principles
 
-## Consistency is key
+
+### Premature Optimization Is the Root of All Evil
+
+Premature optimization is spending a lot of time on something that you may not actually need. 
+
+One of the biggest challenges is making sure we are making good use of our time
+
+My biggest concern right now isn’t performance or scale. I’m spending my time working on prototyping some of the features and designing UI mockups of other parts of the product. I have been focusing on getting user feedback to iterating on the final product features and functionality. I am trying to prevent wasting a lot of time on things that may never be needed.
+
+
+
+### Consistency is key
 
 Consistency is defined as: sameness, conformity, uniformity.
 

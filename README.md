@@ -49,3 +49,19 @@ What you end up with is a software system with X number of ways of doing the sam
 Although beneficial when taken individually, the improvements as a group introduced inconsistency which made the system harder to reason about over time.
 
 Code should look like it was written by a single individual.
+
+
+
+
+
+
+
+
+## Some rule
+
+- Eviter de mettre du business related dans le service/api, 
+- ne pas faire une route dans l'api pour chaque function, 
+- nommer les variables avec _ plutot que camelcase, 
+- avoir un MDD le plus flat possible, 
+- faire une route d'upload des images plutot que s'emmerder a merger ca avec un put etc... 
+- dont create   wasRefused: false properties but instead status : String {REFUSED,ACCEPTED,PENDING}

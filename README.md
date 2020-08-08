@@ -15,7 +15,9 @@ React Native
 ## Some principles
 
 
-### Premature Optimization Is the Root of All Evil
+### Dont try optimize too soon
+
+```Premature Optimization Is the Root of All Evil```
 
 Premature optimization is spending a lot of time on something that you may not actually need. 
 

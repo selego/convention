@@ -53,11 +53,7 @@ Code should look like it was written by a single individual.
 
 
 
-
-
-
-
-## Some rule
+## Some rules
 
 - Eviter de mettre du business related dans le service/api, 
 - ne pas faire une route dans l'api pour chaque function, 

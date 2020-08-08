@@ -23,7 +23,7 @@
 ## Working rules
 
 1) Each of your code should be PRs to another dev
-2) We use git flow  ( https://datasift.github.io/gitflow/GitFlowFeatureBranches.png )
+2) We use git flow  ( https://datasift.github.io/gitflow/GitFlowFeatureBranches.png ) when we are in production. When we are in alpha, we just use a one branch
 
 
 

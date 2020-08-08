@@ -22,6 +22,7 @@
 
 
 
+
 ## Some principles
 
 
@@ -53,10 +54,16 @@ Although beneficial when taken individually, the improvements as a group introdu
 
 Code should look like it was written by a single individual.
 
+## Working rules
+
+1) Each of your code should be PRs to another dev
+2) We use git flow  ( https://datasift.github.io/gitflow/GitFlowFeatureBranches.png )
 
 
 
-## Some rules
+
+
+## Coding rules
 
 - Eviter de mettre du business related dans le service/api, 
 - ne pas faire une route dans l'api pour chaque function, 

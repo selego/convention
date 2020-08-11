@@ -27,7 +27,7 @@
 
 
 
-## Coding rules ( WIP)
+## Coding good practices ( WIP)
 
 - Eviter de mettre du business related dans le service/api, 
 - ne pas faire une route dans l'api pour chaque function, 

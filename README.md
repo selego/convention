@@ -43,6 +43,46 @@
 ## Some principles
 
 
+### Make your code readable
+
+The code should be easy to understand ( even more than optimisation ) . For example, we want to check on the logic side if we have duplicated emails : 
+
+
+```
+if (body.hasOwnProperty("email") && (user.email !== email)) {
+    const userWithEmail = await UserObject.findOne({ email });
+    if (userWithEmail) return res.status(400).send({ ok: false, code: EMAIL_ALREADY_EXISTS });
+    user.email = email;
+}
+```
+
+The code is hard to read and understand . 
+
+The code bellow is easier
+
+```
+if (body.hasOwnProperty("email")) {
+   const userWithEmail = await UserObject.findOne({ email });
+   if (userWithEmail && userWithEmail._id !== user._id) return res.status(400).send({ ok: false, code: EMAIL_ALREADY_EXISTS });
+   user.email = email;
+  }
+}
+```
+
+### Comment when you can't make your code readable
+
+Sometimes, you can't make the code easy to read. Then , please add a comment ! 
+
+Example : Usage of the Never used Sparse property
+
+
+```
+ // Sparse means can be nullable. The purpose is to have unique check only if
+  // value is present in the field
+  email: { type: String, unique: true, sparse: true },
+  ```
+
+
 ### Dont try optimize too soon
 
 ```Premature Optimization Is the Root of All Evil```

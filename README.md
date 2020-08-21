@@ -29,6 +29,14 @@
 
 ## Coding good practices ( WIP)
 
+
+- Keep it simple
+- Make your code readable 
+- Comment when you can't make your code readable
+- Deliver fast high added valuable for the client
+
+
+
 - Eviter de mettre du business related dans le service/api, 
 - ne pas faire une route dans l'api pour chaque function, 
 - nommer les variables avec _ plutot que camelcase, 
@@ -41,6 +49,12 @@
 
 
 ## Some principles
+
+### Deliver fast high added valuable for the client
+
+What client really need . Its not the login, or onboarding or a filters. Its the core features of the products
+Even if it the project manager goal to take care of priorities with the client, the developer should always keep in mind core features
+
 
 
 ### Make your code readable

@@ -36,11 +36,13 @@
 - KISS (Keep it simple) @todo 
 - Services and global components should be business agnostic
 - Prefer copy paste the same code instead of DRY ( dont repeat yourself) for readibility
-- Use linter @todo seb
 - Single responsibility principle @todo 
 - Make your data model as simple as possible  @todo 
 - Use CRUD in api efficiently
 - Anticipate less is better than anticipate too much
+-
+- Think about maintenance @todo seb
+- Use linter @todo seb
 
 
 

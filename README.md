@@ -38,9 +38,9 @@
 - Prefer copy paste the same code instead of DRY ( dont repeat yourself) for readibility
 - Use linter @todo seb
 - Single responsibility principle @todo 
-- Make your data model as simple as possible 
+- Make your data model as simple as possible  @todo 
+- Use CRUD in api efficiently
 
-- avoir un MDD le plus flat possible, 
 
 - ne pas faire une route dans l'api pour chaque function, 
 - dont create a function used once which is only one line
@@ -118,6 +118,29 @@ Example : Usage of the Never used Sparse property
 ### Prefer copy paste same code instead of DRY ( dront repeat yourself) for readibility
 
 Find useAPI @arnaud
+
+
+### Use CRUD in api efficiently
+
+For example, 
+
+two routes : 
+
+```
+put(`/user/setUserName`, {name})
+put(`/user/setUserPhone`, {phone})
+```
+
+Can be simplify in
+```
+put(`/user`, {name, phone }) 
+```
+but use 
+```
+const obj = {}
+body.hasOwnProperty("name") && obj.name = body.name
+body.hasOwnProperty("phone") && obj.phone = body.phone
+```
 
 
 ### Make your data model as simple as possible 

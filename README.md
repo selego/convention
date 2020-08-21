@@ -40,6 +40,7 @@
 - Single responsibility principle @todo 
 - Make your data model as simple as possible  @todo 
 - Use CRUD in api efficiently
+- Anticipate less is better than anticipate too much
 
 
 - ne pas faire une route dans l'api pour chaque function, 
@@ -100,6 +101,21 @@ if (body.hasOwnProperty("email")) {
   }
 }
 ```
+
+
+### Anticipate less is better than anticipate too much
+
+Its better to spend less time , have less code and deliver faster than spend time optimising for futurs problems and features. We loose agility and readibility
+
+
+
+
+
+ ( in order for the client to do user tests) 
+
+
+
+
 
 ### Comment when you can't make your code readable
 

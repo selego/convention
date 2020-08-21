@@ -34,6 +34,7 @@
 - Make your code readable 
 - Comment when you can't make your code readable
 - Deliver fast high added valuable for the client
+- Services and components should be business agnostic
 
 
 
@@ -55,12 +56,18 @@
 What client really need . Its not the login, or onboarding or a filters. Its the core features of the products
 Even if it the project manager goal to take care of priorities with the client, the developer should always keep in mind core features
 
+### Services and components should be business agnostic
+
+Examples :
+
+The api in services/api.js could/should be copy paster from a project to another without much modications
+
+A components table.js in the global component folders (Smart Table) shouldnt care if it deals with the business data. It should just care only into rendering stuff
 
 
 ### Make your code readable
 
 The code should be easy to understand ( even more than optimisation ) . For example, we want to check on the logic side if we have duplicated emails : 
-
 
 ```
 if (body.hasOwnProperty("email") && (user.email !== email)) {

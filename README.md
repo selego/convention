@@ -30,21 +30,31 @@
 ## Coding good practices ( WIP)
 
 
-- Keep it simple
 - Make your code readable 
 - Comment when you can't make your code readable
-- Deliver fast high added valuable for the client
-- Services and components should be business agnostic
+- Deliver core features first and fast ( high added value )
+- KISS (Keep it simple) @todo 
+- Services and global components should be business agnostic
+- Prefer copy paste the same code instead of DRY ( dont repeat yourself) for readibility
+- Use linter @todo seb
+- Single responsibility principle @todo 
+- Make your data model as simple as possible 
 
-
-
-- Eviter de mettre du business related dans le service/api, 
-- ne pas faire une route dans l'api pour chaque function, 
-- nommer les variables avec _ plutot que camelcase, 
 - avoir un MDD le plus flat possible, 
-- faire une route d'upload des images plutot que s'emmerder a merger ca avec un put etc... 
-- dont create   wasRefused: false properties but instead status : String {REFUSED,ACCEPTED,PENDING}
+
+- ne pas faire une route dans l'api pour chaque function, 
 - dont create a function used once which is only one line
+
+
+
+- faire une route d'upload des images plutot que s'emmerder a merger ca avec un put etc... 
+
+
+
+
+
+- dont create   wasRefused: false properties but instead status : String {REFUSED,ACCEPTED,PENDING}
+
 
 
 
@@ -63,6 +73,7 @@ Examples :
 The api in services/api.js could/should be copy paster from a project to another without much modications
 
 A components table.js in the global component folders (Smart Table) shouldnt care if it deals with the business data. It should just care only into rendering stuff
+
 
 
 ### Make your code readable
@@ -102,6 +113,21 @@ Example : Usage of the Never used Sparse property
   // value is present in the field
   email: { type: String, unique: true, sparse: true },
   ```
+  
+  
+### Prefer copy paste same code instead of DRY ( dront repeat yourself) for readibility
+
+Find useAPI @arnaud
+
+
+### Make your data model as simple as possible 
+
+For example, a dev dont need to create a table for a feature like in password reset ( with token, expiration etc .. ) I can't simply create 2 properties in user : 
+password_reset_expire
+password_reset_token
+
+
+@arnaud : trouver l'article sur quand faire une nouvelle collection 
 
 
 ### Dont try optimize too soon

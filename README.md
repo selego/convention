@@ -43,18 +43,6 @@
 - Anticipate less is better than anticipate too much
 
 
-- ne pas faire une route dans l'api pour chaque function, 
-- dont create a function used once which is only one line
-
-
-
-- faire une route d'upload des images plutot que s'emmerder a merger ca avec un put etc... 
-
-
-
-
-
-- dont create   wasRefused: false properties but instead status : String {REFUSED,ACCEPTED,PENDING}
 
 
 
@@ -196,3 +184,11 @@ What you end up with is a software system with X number of ways of doing the sam
 Although beneficial when taken individually, the improvements as a group introduced inconsistency which made the system harder to reason about over time.
 
 Code should look like it was written by a single individual.
+
+
+
+
+
+TODO LATER : 
+
+- faire une route d'upload des images plutot que s'emmerder a merger ca avec un put etc... 

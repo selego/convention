@@ -1,22 +1,27 @@
 
 ## Our stack
 
-- AWS ( Or azure when needed )
+### Cloud
 
+- AWS 
+- Azure ( when needed ) 
 
+### Tech 
 - ReactJs
 - Styled components
 - Reactstrap
 - Nodejs / Express 
 - MongoDb / Mongoose 
-
 - ElasticSearch ( only when high volume / complexe queries are required , connected with mongoosastic) 
 - React Native
 
+### Monitoring
 - Sentry
 - RobotUpTime
-
 - AmplitudeJS
+- Mixpanel ( For mobile apps ) 
+
+### Project management 
 - Trello 
 
 
@@ -24,7 +29,6 @@
 
 1) Each of your code should be PRs to another dev
 2) We use git flow  ( https://datasift.github.io/gitflow/GitFlowFeatureBranches.png ) when we are in production. When we are in alpha, we just use a one branch
-
 
 
 ## Coding good practices ( WIP)

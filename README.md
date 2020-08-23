@@ -46,28 +46,8 @@
 10. Anticipate less is better than anticipate too much
 11. Check the boilerplate project  (https://github.com/selego/boilerplate)
 12. Think about maintenance @todo seb
-13. Use linter @todo seb
-
-
-## Some principles
-
-### Deliver fast high added valuable for the client
-
-What client really need. Its not the login, or the onboarding or a filter. Its the core features of the products.
-Even if its the project manager goal to take care of priorities with the client, the developer should always keep in mind core features
-
-### Services and components should be business/logic agnostic
-
-It's important to keep logic / business related stuff outside services or global components. 
-
-- Example 1 :
-
-The api in services/api.js could/should be copy paster from a project to another without much modications. 
-
-- Example 2 : 
-
-A components in the global app/src/component folder shouldnt care if it deals with the business/logic data. It should just care only into rendering stuff.
-
+13. Dont try optimizing too soon
+14. Consistency is key
 
 
 ### Make your code readable
@@ -98,14 +78,6 @@ if (body.hasOwnProperty("email")) {
 ```
 
 
-### Anticipate less is better than anticipate too much
-
-Its better to spend less time , have less code and deliver faster than spend time optimising for futurs problems and features. We loose agility and readibility when we anticipate futur to much. 
-Also, nobody knows the futur of any product. We could pivote the product or even stop it.
-
-The goal is to deliver key features for the client to validate the product.
-
-
 
 ### Comment when you can't make your code readable
 
@@ -121,7 +93,30 @@ email: { type: String, unique: true, sparse: true },
 
 ```
   
- 
+### Deliver fast high added valuable for the client
+
+What client really need. Its not the login, or the onboarding or a filter. Its the core features of the products.
+Even if its the project manager goal to take care of priorities with the client, the developer should always keep in mind core features
+
+
+### KISS
+
+//TODO
+
+
+### Services and components should be business/logic agnostic
+
+It's important to keep logic / business related stuff outside services or global components. 
+
+- Example 1 :
+
+The api in services/api.js could/should be copy paster from a project to another without much modications. 
+
+- Example 2 : 
+
+A components in the global app/src/component folder shouldnt care if it deals with the business/logic data. It should just care only into rendering stuff.
+
+
 ### Prefer copy paste same code instead of DRY ( dont repeat yourself) for readibility
 
 This hooks was created in order to control every request to API : 
@@ -169,7 +164,27 @@ export default (toCall, ...args) => {
 It's hard to read and its aimed to create optimisations against readibility.
 
 
+### Anticipate less is better than anticipate too much
 
+Its better to spend less time , have less code and deliver faster than spend time optimising for futurs problems and features. We loose agility and readibility when we anticipate futur to much. 
+Also, nobody knows the futur of any product. We could pivote the product or even stop it.
+
+The goal is to deliver key features for the client to validate the product.
+
+
+
+ ### Single responsibility principle
+ 
+ // TODO
+
+
+### Make your data model as simple as possible  ( as flat as possible )
+
+For example, a dev dont need to create a table for a feature like in password reset ( with token, expiration etc .. ). We can simply create 2 properties in user : 
+password_reset_expire
+password_reset_token
+
+@arnaud : trouver l'article sur quand faire une nouvelle collection 
 
 
 ### Use CRUD in api efficiently
@@ -198,14 +213,11 @@ body.hasOwnProperty("phone") && obj.phone = body.phone
 ```
 
 
-### Make your data model as simple as possible  ( as flat as possible )
+### Check the boilerplate project
+// todo
 
-For example, a dev dont need to create a table for a feature like in password reset ( with token, expiration etc .. ). We can simply create 2 properties in user : 
-password_reset_expire
-password_reset_token
 
-@arnaud : trouver l'article sur quand faire une nouvelle collection 
-
+### Think about maintenance
 
 ### Dont try optimizing too soon
 

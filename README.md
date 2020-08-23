@@ -214,7 +214,10 @@ body.hasOwnProperty("phone") && obj.phone = body.phone
 
 
 ### Check the boilerplate project
-// todo
+
+Please check the boilerplate project for example and get started stuff
+
+https://github.com/selego/boilerplate
 
 
 ### Think about maintenance

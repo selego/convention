@@ -100,9 +100,10 @@ if (body.hasOwnProperty("email")) {
 
 ### Anticipate less is better than anticipate too much
 
-Its better to spend less time , have less code and deliver faster than spend time optimising for futurs problems and features. We loose agility and readibility when we anticipuate futur stuff. 
+Its better to spend less time , have less code and deliver faster than spend time optimising for futurs problems and features. We loose agility and readibility when we anticipate futur to much. 
+Also, nobody knows the futur of any product. We could pivote the product or even stop it.
 
-The goal is to deliver key features for the client to do user testing asap
+The goal is to deliver key features for the client to validate the product.
 
 
 

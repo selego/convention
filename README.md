@@ -41,7 +41,7 @@
 5. Services and global components should be business agnostic
 6. Prefer copy paste the same code instead of DRY ( dont repeat yourself) for readibility
 7. Single responsibility principle @todo 
-8. Make your data model as simple as possible  @todo 
+8. Make your data model as simple as possible
 9. Use CRUD in api efficiently
 10. Anticipate less is better than anticipate too much
 11. Check the boilerplate project  (https://github.com/selego/boilerplate)

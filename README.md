@@ -180,7 +180,7 @@ The goal is to deliver key features for the client to validate the product.
 
 ### Make your data model as simple as possible  ( as flat as possible )
 
-For example, a dev dont need to create a table for a feature like in password reset ( with token, expiration etc .. ). We can simply create 2 properties in user : 
+For example, a dev dont need to create a table/collection for a feature like in password reset ( with token, expiration etc .. ). We can simply create 2 properties in user : 
 password_reset_expire
 password_reset_token
 

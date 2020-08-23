@@ -161,7 +161,7 @@ export default (toCall, ...args) => {
 ```
 
 
-It's hard to read and its aimed to create optimisations against readibility.
+It's hard to read and its aimed to create optimisations against readibility. Its more readeble to have several the same code on each routes handling errors
 
 
 ### Anticipate less is better than anticipate too much

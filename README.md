@@ -34,7 +34,7 @@
 
 ## Coding good practices ( WIP)
 
-1. Make your code readable 
+1. Make your code highly readable 
 2. Comment when you can't make your code readable
 3. Deliver core features first and fast ( high added value )
 4. KISS (Keep it simple) @todo 
@@ -50,7 +50,7 @@
 14. Consistency is key
 
 
-### Make your code readable
+### Make your code highly readable
 
 The code should be easy to understand ( readibility >  optimisation ) . For example, we want to check on the logic side if we have duplicated emails : 
 

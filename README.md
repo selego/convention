@@ -101,7 +101,7 @@ Even if its the project manager goal to take care of priorities with the client,
 
 ### KISS
 
-//TODO
+@todo SEB
 
 
 ### Services and components should be business/logic agnostic
@@ -175,7 +175,7 @@ The goal is to deliver key features for the client to validate the product.
 
  ### Single responsibility principle
  
- // TODO
+@todo SEB
 
 
 ### Make your data model as simple as possible  ( as flat as possible )
@@ -221,6 +221,8 @@ https://github.com/selego/boilerplate
 
 
 ### Think about maintenance
+
+@todo SEB
 
 ### Dont try optimizing too soon
 

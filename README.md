@@ -34,24 +34,19 @@
 ## Coding good practices ( WIP)
 
 
-- Make your code readable 
-- Comment when you can't make your code readable
-- Deliver core features first and fast ( high added value )
-- KISS (Keep it simple) @todo 
-- Services and global components should be business agnostic
-- Prefer copy paste the same code instead of DRY ( dont repeat yourself) for readibility
-- Single responsibility principle @todo 
-- Make your data model as simple as possible  @todo 
-- Use CRUD in api efficiently
-- Anticipate less is better than anticipate too much
--
-- Think about maintenance @todo seb
-- Use linter @todo seb
-
-
-
-
-
+1. Make your code readable 
+2. Comment when you can't make your code readable
+3. Deliver core features first and fast ( high added value )
+4. KISS (Keep it simple) @todo 
+5. Services and global components should be business agnostic
+6. Prefer copy paste the same code instead of DRY ( dont repeat yourself) for readibility
+7. Single responsibility principle @todo 
+8. Make your data model as simple as possible  @todo 
+9. Use CRUD in api efficiently
+10. Anticipate less is better than anticipate too much
+11. Check the boilerplate project  (https://github.com/selego/boilerplate)
+12. Think about maintenance @todo seb
+13. Use linter @todo seb
 
 
 ## Some principles
@@ -61,21 +56,26 @@
 What client really need. Its not the login, or the onboarding or a filter. Its the core features of the products.
 Even if its the project manager goal to take care of priorities with the client, the developer should always keep in mind core features
 
-### Services and components should be business agnostic
+### Services and components should be business/logic agnostic
 
-Examples :
+It's important to keep logic / business related stuff outside services or global components. 
+
+- Example 1 :
 
 The api in services/api.js could/should be copy paster from a project to another without much modications. 
 
-A components table.js in the global component folders (Smart Table) shouldnt care if it deals with the business data. It should just care only into rendering stuff
+- Example 2 : 
+
+A components in the global app/src/component folder shouldnt care if it deals with the business/logic data. It should just care only into rendering stuff.
 
 
 
 ### Make your code readable
 
-The code should be easy to understand ( even more than optimisation ) . For example, we want to check on the logic side if we have duplicated emails : 
+The code should be easy to understand ( readibility >  optimisation ) . For example, we want to check on the logic side if we have duplicated emails : 
 
 ```
+if (body.hasOwnProperty("firstName")) user.firstName = firstName;
 if (body.hasOwnProperty("email") && (user.email !== email)) {
     const userWithEmail = await UserObject.findOne({ email });
     if (userWithEmail) return res.status(400).send({ ok: false, code: EMAIL_ALREADY_EXISTS });
@@ -83,11 +83,12 @@ if (body.hasOwnProperty("email") && (user.email !== email)) {
 }
 ```
 
-The code is hard to read and understand . 
+The code is not easy to read and understand. Why is there an email check there and not somewhere else ? 
 
-The code bellow is easier
+The code bellow is easier to understand : 
 
 ```
+if (body.hasOwnProperty("firstName")) user.firstName = firstName;
 if (body.hasOwnProperty("email")) {
    const userWithEmail = await UserObject.findOne({ email });
    if (userWithEmail && userWithEmail._id !== user._id) return res.status(400).send({ ok: false, code: EMAIL_ALREADY_EXISTS });
@@ -99,35 +100,75 @@ if (body.hasOwnProperty("email")) {
 
 ### Anticipate less is better than anticipate too much
 
-Its better to spend less time , have less code and deliver faster than spend time optimising for futurs problems and features. We loose agility and readibility
+Its better to spend less time , have less code and deliver faster than spend time optimising for futurs problems and features. We loose agility and readibility when we anticipuate futur stuff. 
 
-
-
-
-
- ( in order for the client to do user tests) 
-
-
+The goal is to deliver key features for the client to do user testing asap
 
 
 
 ### Comment when you can't make your code readable
 
-Sometimes, you can't make the code easy to read. Then , please add a comment ! 
+Sometimes, you can't make the code easy to read. Then ,please add a comment ! 
 
 Example : Usage of the Never used Sparse property
 
 
 ```
  // Sparse means can be nullable. The purpose is to have unique check only if
-  // value is present in the field
-  email: { type: String, unique: true, sparse: true },
-  ```
-  
-  
-### Prefer copy paste same code instead of DRY ( dront repeat yourself) for readibility
+ // value is present in the field
+email: { type: String, unique: true, sparse: true },
 
-Find useAPI @arnaud
+```
+  
+ 
+### Prefer copy paste same code instead of DRY ( dont repeat yourself) for readibility
+
+This hooks was created in order to control every request to API : 
+
+```
+/**
+ * Helper hook to fetch data on component mount
+ *
+ * @param {Function} toCall -> API function to call, when component gets mounted
+ * @param args -> args to pass to the function
+ *
+ * @return {[boolean | null, Object | null, Object | null]} -> return status as first element(null while pending) data as second argument and error object as third
+ */
+export default (toCall, ...args) => {
+  const { isInternetReachable } = useContext(NetworkContext);
+  const [status, setStatus] = useState(null);
+  const [err, setError] = useState(null);
+  const [data, setData] = useState(null);
+
+  const retry = async () => {
+    try {
+      if (isInternetReachable === false) throw new NoInternetConnectionError();
+
+      const { ok, error, code, ...data } = await toCall(...args);
+      setStatus(ok);
+
+      if (ok) setData(data);
+      else setError(error);
+    } catch (e) {
+      console.log('Error in useApi');
+      console.log(e);
+      setError(e);
+    }
+  };
+
+  useEffect(() => {
+    retry();
+  }, []);
+
+  return [status, data, err, retry];
+};
+```
+
+
+It's hard to read and its aimed to create optimisations against readibility.
+
+
+
 
 
 ### Use CRUD in api efficiently
@@ -142,10 +183,13 @@ put(`/user/setUserPhone`, {phone})
 ```
 
 Can be simplify in
+
 ```
 put(`/user`, {name, phone }) 
 ```
-but use 
+
+but use this to control the scope of the properties updated
+
 ```
 const obj = {}
 body.hasOwnProperty("name") && obj.name = body.name
@@ -153,17 +197,16 @@ body.hasOwnProperty("phone") && obj.phone = body.phone
 ```
 
 
-### Make your data model as simple as possible 
+### Make your data model as simple as possible  ( as flat as possible )
 
-For example, a dev dont need to create a table for a feature like in password reset ( with token, expiration etc .. ) I can't simply create 2 properties in user : 
+For example, a dev dont need to create a table for a feature like in password reset ( with token, expiration etc .. ). We can simply create 2 properties in user : 
 password_reset_expire
 password_reset_token
-
 
 @arnaud : trouver l'article sur quand faire une nouvelle collection 
 
 
-### Dont try optimize too soon
+### Dont try optimizing too soon
 
 ```Premature Optimization Is the Root of All Evil```
 

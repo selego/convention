@@ -58,14 +58,14 @@
 
 ### Deliver fast high added valuable for the client
 
-What client really need . Its not the login, or onboarding or a filters. Its the core features of the products
-Even if it the project manager goal to take care of priorities with the client, the developer should always keep in mind core features
+What client really need. Its not the login, or the onboarding or a filter. Its the core features of the products.
+Even if its the project manager goal to take care of priorities with the client, the developer should always keep in mind core features
 
 ### Services and components should be business agnostic
 
 Examples :
 
-The api in services/api.js could/should be copy paster from a project to another without much modications
+The api in services/api.js could/should be copy paster from a project to another without much modications. 
 
 A components table.js in the global component folders (Smart Table) shouldnt care if it deals with the business data. It should just care only into rendering stuff
 

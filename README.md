@@ -14,6 +14,7 @@
 - MongoDb / Mongoose 
 - ElasticSearch ( only when high volume / complexe queries are required , connected with mongoosastic) 
 - React Native
+- Prettier
 
 ### Monitoring
 - Sentry

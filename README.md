@@ -185,7 +185,8 @@ For example, a dev dont need to create a table/collection for a feature like in 
 password_reset_expire
 password_reset_token
 
-@arnaud : trouver l'article sur quand faire une nouvelle collection 
+To help you design your database model, you can read those articles from William Zola, Lead Technical Support Engineer at MongoDB
+https://www.mongodb.com/blog/post/6-rules-of-thumb-for-mongodb-schema-design-part-1
 
 
 ### Use CRUD in api efficiently

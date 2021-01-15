@@ -3,8 +3,9 @@
 
 ### Cloud
 
+- CleverCloud 
 - AWS 
-- Azure ( when needed ) 
+- Azure
 
 ### Tech 
 - ReactJs

@@ -262,6 +262,23 @@ Code should look like it was written by a single individual.
 
 ------------------
 
+Instagram was only a team of ~10 engineers when it got acquired $1B by Facebook 💰
+
+How did they do it?
+
+👩‍💻 They were pragmatic with the way they code!
+
+Always think about the future but don't implement everything at first… Over optimization will kill you!
+
+Their CTO Mike Krieger said at the time they were only using a simple python/django web application in production and that it was good enough.
+
+➡️ Forget about your 10 microservices communicating via gRPC when you have ONLY 2 clients
+
+⚙️ Mike also emphasized that most people try to over-optimize their systems before problems even arise… Why optimize if your product does not work or your company dies tomorrow?
+
+You will never be enough engineers to solve all the technical problems the engineering team raises, but that is fine because only a few are important so just focus on those… Response time optimization can wait 😉
+
+
 
 
 

@@ -258,9 +258,12 @@ Although beneficial when taken individually, the improvements as a group introdu
 Code should look like it was written by a single individual.
 
 
+### Simple Outperformed Smart. 
 
+As a self-admitted elitist, it pains me to say this, but it’s true: the startups we audited that are now doing the best usually had an almost brazenly ‘Keep It Simple’ approach to engineering. Cleverness for cleverness sake was abhorred. On the flip side, the companies where we were like ”woah, these folks are smart as hell” for the most part kind of faded. Generally, the major foot-gun (which I talk about more in a previous post on foot-guns) that got a lot of places in trouble was the premature move to microservices, architectures that relied on distributed computing, and messaging-heavy designs.
+Source : https://kenkantzer.com/ou-dont-need-hundreds-of-engineers/
 
-------------------
+### Be pragmatic
 
 Instagram was only a team of ~10 engineers when it got acquired $1B by Facebook 💰
 
@@ -277,6 +280,9 @@ Their CTO Mike Krieger said at the time they were only using a simple python/dja
 ⚙️ Mike also emphasized that most people try to over-optimize their systems before problems even arise… Why optimize if your product does not work or your company dies tomorrow?
 
 You will never be enough engineers to solve all the technical problems the engineering team raises, but that is fine because only a few are important so just focus on those… Response time optimization can wait 😉
+
+
+------------------
 
 
 

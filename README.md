@@ -9,6 +9,7 @@
 
 ### Tech 
 - ReactJs
+- Tailwind
 - Styled components
 - Reactstrap
 - Nodejs / Express 
@@ -24,6 +25,7 @@
 - Mixpanel ( For mobile apps ) 
 
 ### Project management 
+- Notion
 - Trello 
 
 
